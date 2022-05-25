@@ -1,1 +1,1 @@
-gunicorn ciprep.wsgi
+web: gunicorn ciprep.wsgi
