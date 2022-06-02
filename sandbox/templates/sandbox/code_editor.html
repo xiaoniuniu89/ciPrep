@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'codemirror/lib/codemirror.css' %}">
+<link rel="stylesheet" href="{% static 'code_editor/css/code_editor.css' %}">
+
+{% endblock extra_css %}
+{% block content %}
+
+
+
+<div class="header">
+    <button id="run-btn">
+        Run
+    </button>
+</div>
+<div class="editor">
+    <div class="code">
+        <div class="html-code"></div>
+        <div class="css-code"></div>
+        <div class="javascript-code"></div>
+    </div>
+        <div class="preview">
+            <iframe id="preview-window"></iframe>
+        </div>
+    
+</div>
+
+
+{{room_name | json_script:"room-name"}}
+
+<script src="{% static 'codemirror/lib/codemirror.js' %}"></script>
+<script src="{% static 'codemirror/mode/xml/xml.js' %}"></script>
+<script src="{% static 'codemirror/mode/css/css.js' %}"></script>
+<script src="{% static 'codemirror/mode/javascript/javascript.js' %}"></script>
+<script src="{% static 'codemirror/addon/hint/show-hint.js' %}"></script>
+<script src="{% static 'code_editor/js/code_editor.js' %}"></script>
+{% endblock content %}
+
+
+

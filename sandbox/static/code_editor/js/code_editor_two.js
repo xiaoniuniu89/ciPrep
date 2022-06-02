@@ -1,0 +1,1 @@
+const code = document.querySelector('#codemirror-textarea')
